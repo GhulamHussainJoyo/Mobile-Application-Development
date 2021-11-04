@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="MobileApplicationDevelopment">Android Application Development</string>
+    <string name="dashboard">DashBoard</string>
+    <string name="lab_1">Lab 1</string>
+    <string name="lab_2">Lab 2</string>
+</resources>
