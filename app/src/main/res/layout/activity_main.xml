@@ -9,11 +9,13 @@
     android:rowCount="5"
     tools:context=".MainActivity"
     >
+
     <include
         android:id="@+id/toolbar_dashboard"
         layout="@layout/toolbar" />
 
     <ImageView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@mipmap/main_activity_front"

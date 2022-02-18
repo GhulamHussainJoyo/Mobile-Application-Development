@@ -7,53 +7,94 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.myapplication.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PresidentialElectionCandidates_frag2#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class PresidentialElectionCandidates_frag2 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private int position = -1;
+    private ImageView presedentImage;
+    private TextView presentDetailsTextView;
+    private int[] imagesList;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public PresidentialElectionCandidates_frag2() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PresidentialElectionCandidates_frag2.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PresidentialElectionCandidates_frag2 newInstance(String param1, String param2) {
-        PresidentialElectionCandidates_frag2 fragment = new PresidentialElectionCandidates_frag2();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+        imagesList = new int[8];
+
+        imagesList[0] = R.drawable.clinton;
+        imagesList[1] = R.drawable.sanders;
+        imagesList[2] = R.drawable.omalley;
+        imagesList[3] = R.drawable.chafee;
+        imagesList[4] = R.drawable.trump;
+        imagesList[5] = R.drawable.carson;
+        imagesList[6] = R.drawable.rubio;
+        imagesList[7] = R.drawable.bush;
+
+
+
+        Bundle bundle = getArguments();
+        if (bundle != null)
+        {
+            position = bundle.getInt("selectedItem");
+
+        }
+
+
+
+    }
+
+    private void setFragment(int position)
+    {
+        switch (position)
+        {
+            case 0:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Hilary Cilton (Rhode Island)");
+                break;
+            case 1:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Bernie Sanders (Rhode Island)");
+                break;
+            case 2:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Marrtin O'Malley (Rhode Island)");
+                break;
+            case 3:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Donald Trump (Rhode Island)");
+                break;
+            case 4:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Ben Carson (Rhode Island)");
+                break;
+            case 5:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Hilary Cilton (Rhode Island)");
+                break;
+            case 6:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Marco Rubio (Rhode Island)");
+                break;
+            case 7:
+                presedentImage.setImageResource(imagesList[position]);
+                presentDetailsTextView.setText("Former Governer Jeb Bush (Rhode Island)");
+                break;
+
         }
     }
 
@@ -61,6 +102,12 @@ public class PresidentialElectionCandidates_frag2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_presidential_election_candidates_frag2, container, false);
+        View view =  inflater.inflate(R.layout.fragment_presidential_election_candidates_frag2, container, false);
+        presedentImage = view.findViewById(R.id.presedentImageView);
+        presentDetailsTextView = view.findViewById(R.id.presedentNameTextView);
+
+        setFragment(position);
+
+        return view;
     }
 }

@@ -10,6 +10,15 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +27,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".lab_1.activity_3"></activity>
+        <activity android:name=".Sensors.ShakingSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Sensors.sensor">
+
+        </activity>
+        <activity android:name=".lab_10.MediaPlayer.MediaPlayer"></activity>
+        <activity android:name=".lab_10.ToggleRotate" />
+        <activity android:name=".volley.task_1" />
+        <activity android:name=".lab_10.AlarmManager.AlarmManagerLocal" />
+        <activity android:name=".broadCast._BroadcastReceiver" />
+        <activity android:name=".lab_9.Moquelumnan" />
+        <activity android:name=".lab_10.StopWatch" />
+        <activity android:name=".lab_10.ForegroundService_vity" />
+        <activity android:name=".thread_process.JournalDevNotification" />
+        <activity android:name=".thread_process.NotificationClass" />
+        <activity android:name=".lab_9.PresidentialElectionCandidates" />
+        <activity android:name=".lab_9.ContactList" />
+        <activity android:name=".lab_9.addUser" />
+        <activity android:name=".adapters.customAdapter" />
+        <activity android:name=".fragments.HowToCreateFragment" />
+        <activity android:name=".TextToSpeech" />
+        <activity android:name=".lab_8.internalStorageAndExxternalStorage" />
+        <activity android:name=".lab_8.Madlibs" />
+        <activity android:name=".lab_1.activity_3" />
         <activity android:name=".lab_7.mp3Player" />
         <activity android:name=".lab_6.SignUp" />
         <activity android:name=".lab_6.Login" />
@@ -31,14 +68,18 @@
         <activity android:name=".lab_5.methodLifeCycle" />
         <activity android:name=".lab_4.act2" />
         <activity android:name=".lab_4.act1" />
-        <activity android:name=".SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".SplashScreen" />
         <activity android:name=".MainActivity" />
+
+        <receiver
+            android:name=".thread_process.NotificationReceiver"
+            android:exported="false" />
+        <receiver android:name=".broadCast.myReceiver" />
+
+        <service
+            android:name=".lab_10.ForegroundService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

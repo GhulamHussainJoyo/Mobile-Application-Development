@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+
     tools:context=".lab_9.PresidentialElectionCandidates">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <fragment
+        android:id="@+id/presedentNameListFrag"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:name="com.example.myapplication.lab_9.PresidentialElectionCandidates_frag1"
+        tools:layout="@layout/fragment_presidential_election_candidates_frag1"
+
+        />
+
+    <fragment
+        android:id="@+id/presedentDetailFrag"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:name="com.example.myapplication.lab_9.PresidentialElectionCandidates_frag2"
+        tools:layout="@layout/fragment_presidential_election_candidates_frag2"
+
+        />
+
+
+</LinearLayout>

@@ -1,7 +1,39 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="MobileApplicationDevelopment">Android Application Development</string>
     <string name="dashboard">DashBoard</string>
     <string name="lab_1">Lab 1</string>
     <string name="lab_2">Lab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ispum">
+
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </string>
+
+    <string-array name="list_items">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+    </string-array>
+
+    <string-array name="presedent_names">
+        <item>Hillary Cliton</item>
+        <item>Bernie Sanders</item>
+        <item>Martin O Malley</item>
+        <item>Lincoin Chafee</item>
+        <item>Donald Trump</item>
+        <item>Ben Carson</item>
+        <item>Marco Rubio</item>
+        <item>Jeb Bush</item>
+    </string-array>
+
 </resources>
